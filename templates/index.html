@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气查询系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ 天气查询系统</h1>
+            <p>基于 Visual Crossing API 和 Redis 缓存</p>
+        </header>
+
+        <div class="search-section">
+            <form id="weather-form">
+                <div class="input-group">
+                    <input type="text" id="city-input" placeholder="输入城市名称 (如: Beijing, Shanghai)" required>
+                    <button type="submit">查询天气</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>正在获取天气数据...</p>
+        </div>
+
+        <div id="weather-result" class="weather-result hidden">
+            <div class="cache-status" id="cache-status"></div>
+            
+            <div class="current-weather" id="current-weather"></div>
+
+            <div class="daily-weather" id="daily-weather"></div>
+
+            <div class="hourly-weather" id="hourly-weather"></div>
+        </div>
+
+        <div id="error-message" class="error-message hidden"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
