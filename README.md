@@ -162,3 +162,4 @@ GET /weather?city=beijing
 - [Visual Crossing Weather API文档](https://www.visualcrossing.com/weather-api)
 - [Flask官方文档](https://flask.palletsprojects.com/)
 - [Redis官方文档](https://redis.io/documentation)
+- [Roadmap](https://roadmap.sh/projects/weather-api-wrapper-service)
